@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #gameBox {
+            width: 300px;
+            height: 300px;
+            background: red;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mini Game 🎮</h1>
+    <div id="gameBox">Bos!</div>
+
+    <script>
+        const gameBox = document.getElementById("gameBox");
+        let count = 0;
+
+        gameBox.addEventListener("click", () => {
+            count++;
+            gameBox.textContent = count;
+            gameBox.style.background = count % 2 === 0 ? "blue" : "red";
+        });
+    </script>
+</body>
+</html>
